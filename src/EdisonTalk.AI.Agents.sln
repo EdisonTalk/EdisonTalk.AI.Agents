@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EDT.Agent.Shared", "EDT.Agent.Shared\EDT.Agent.Shared.csproj", "{9EFBD542-D3CE-4554-9845-4F3ECA95E5D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Shared", "01.Shared", "{DD21FA39-C6F3-4FC6-9F4D-4548A9A813B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.PaperAssistant", "02.PaperAssistant", "{51649C68-96DB-4B73-A45C-8930D3E53E12}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EDT.PaperAssistant.Portal", "EDT.PaperAssistant.Portal\EDT.PaperAssistant.Portal.csproj", "{C4AB7C0F-EE0D-4F04-BD5E-5D3D6A4D0433}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.SolutionItems", "00.SolutionItems", "{21FBDD66-35C6-4ED7-BED7-F510529BC42A}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.VectorDataAssistant", "03.VectorDataAssistant", "{96B0EF30-F8A4-4483-A0CE-16A30E8DFE89}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EDT.CloudAssistant.Portal", "EDT.CloudAssistant.Portal\EDT.CloudAssistant.Portal.csproj", "{6F070C5B-DF63-48B8-AD7E-3162B14D475B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EFBD542-D3CE-4554-9845-4F3ECA95E5D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EFBD542-D3CE-4554-9845-4F3ECA95E5D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EFBD542-D3CE-4554-9845-4F3ECA95E5D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EFBD542-D3CE-4554-9845-4F3ECA95E5D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4AB7C0F-EE0D-4F04-BD5E-5D3D6A4D0433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4AB7C0F-EE0D-4F04-BD5E-5D3D6A4D0433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4AB7C0F-EE0D-4F04-BD5E-5D3D6A4D0433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4AB7C0F-EE0D-4F04-BD5E-5D3D6A4D0433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F070C5B-DF63-48B8-AD7E-3162B14D475B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F070C5B-DF63-48B8-AD7E-3162B14D475B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F070C5B-DF63-48B8-AD7E-3162B14D475B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F070C5B-DF63-48B8-AD7E-3162B14D475B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9EFBD542-D3CE-4554-9845-4F3ECA95E5D6} = {DD21FA39-C6F3-4FC6-9F4D-4548A9A813B9}
+		{C4AB7C0F-EE0D-4F04-BD5E-5D3D6A4D0433} = {51649C68-96DB-4B73-A45C-8930D3E53E12}
+		{6F070C5B-DF63-48B8-AD7E-3162B14D475B} = {96B0EF30-F8A4-4483-A0CE-16A30E8DFE89}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {963A895C-0BB4-4BEC-B53D-6B44256D8117}
+	EndGlobalSection
+EndGlobal
