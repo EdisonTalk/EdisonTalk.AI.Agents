@@ -19,7 +19,7 @@ var generator =
 Console.WriteLine("[LOG] Finished initializing the embeding generator...");
 
 Console.WriteLine("[LOG] Now loading the vector store - qdrant...");
-var vectorStore = new QdrantVectorStore(new QdrantClient(config["Qdrant:Host"], int.Parse(config["Qdrant:Port"])));
+var vectorStore = new QdrantVectorStore(new QdrantClient(host: config["Qdrant:Host"], port: int.Parse(config["Qdrant:Port"]));
 Console.WriteLine("[LOG] Finished loading the vector store - qdrant...");
 
 Console.WriteLine("[LOG] Now creating test data...");

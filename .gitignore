@@ -160,3 +160,4 @@ UpgradeLog*.XML
 /src/.vs/EdisonTalk.AI.Agents/FileContentIndex/*.vsidx
 /src/.vs/EdisonTalk.AI.Agents/v17/.futdcache.v2
 /src/.vs/EdisonTalk.AI.Agents/v17/DocumentLayout.json
+/src/EDT.RagAssistant.Portal/appsettings.Secrets.json
