@@ -11,6 +11,9 @@ using ChatMessage = Microsoft.Extensions.AI.ChatMessage;
 Console.WriteLine("[LOG] Now loading the configuration...");
 var config = new ConfigurationBuilder()
     .AddJsonFile($"appsettings.json")
+#if DEBUG
+    .AddJsonFile($"appsettings.Development.json")
+#endif
     .Build();
 Console.WriteLine("[LOG] Finished loading the configuration...");
 
@@ -74,7 +77,6 @@ finally
 Console.WriteLine("[LOG] Now starting the chatting window for you...");
 Console.ForegroundColor = ConsoleColor.Green;
 var promptTemplate = """
-                    你是一个专业的AI聊天机器人，为易速鲜花网站的所有员工提供信息咨询服务。
                     请使用下面的提示使用工具从向量数据库中获取相关信息来回答用户提出的问题：
                     {{#with (SearchPlugin-GetTextSearchResults question)}}  
                       {{#each this}}  
@@ -89,7 +91,10 @@ var promptTemplate = """
                     
                     用户问题: {{question}}
                     """;
-var history = new List<ChatMessage>();
+var chatHistory = new List<ChatMessage>
+{
+    new ChatMessage(ChatRole.System, "你是一个专业的AI聊天机器人，为易速鲜花网站的所有员工提供信息咨询服务。")
+};
 var vectorSearchTool = new VectorDataSearcher<Guid>(ragVectorRecordCollection, embedingGenerator);
 var chatOptions = new ChatOptions()
 {
@@ -112,16 +117,16 @@ while (true)
         break;
 
     var ragPrompt = promptTemplate.Replace("{question}", question);
-    history.Add(new ChatMessage(ChatRole.User, ragPrompt));
+    chatHistory.Add(new ChatMessage(ChatRole.User, ragPrompt));
     // Invoke the LLM with a template that uses the search plugin to
     // 1. get related information to the user query from the vector store
     // 2. add the information to the LLM prompt.
     Console.ForegroundColor = ConsoleColor.Green;
-    Console.Write("助手> ");
-    var result = await chatClient.GetResponseAsync(ragPrompt, chatOptions);
+    Console.WriteLine("系统> 思考整理中...");
+    var result = await chatClient.GetResponseAsync(chatHistory, chatOptions);
     var response = result.ToString();
-    Console.Write(response);
-    history.Add(new ChatMessage(ChatRole.Assistant, response));
+    Console.WriteLine($"助手> {response}");
+    chatHistory.Add(new ChatMessage(ChatRole.Assistant, response));
 
     Console.WriteLine();
 }
