@@ -3,9 +3,11 @@ A sample project to show how to create an AI Agents by Microsoft.Extensions.AI r
 
 ## Solution Structure
 - Share Library: EDT.Agent.Shared
-- Agent1: EDT.PaperAssistant.Portal
-- Agent2: EDT.VectorDataAssistant.Portal
-- Agent3: EDT.VectorStoreRAG.Portal
+- Demo1: EDT.PaperAssistant.Portal
+- Demo2: EDT.VectorDataAssistant.Portal
+- Demo3: EDT.VectorStoreRAG.Portal
+- Demo4: MCP Server in MCP C# SDK
+- Demo5: MCP Client in MCP C# SDK
 
 ## Blog Introductions
 - [Quick Start on Creating AI Agent with Micorosft.Extensions.AI](https://www.cnblogs.com/edisonchou/p/-/introduction-to-microsoft-extensions-ai)

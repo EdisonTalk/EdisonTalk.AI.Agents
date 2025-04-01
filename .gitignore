@@ -162,3 +162,4 @@ UpgradeLog*.XML
 /src/.vs/EdisonTalk.AI.Agents/v17/DocumentLayout.json
 /src/EDT.RagAssistant.Portal/appsettings.Secrets.json
 /src/EDT.RagAssistant.Portal/appsettings.Development.json
+/src/EDT.McpClient/appsettings.Development.json
