@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.Hosting;
-using ModelContextProtocol;
-using EDT.McpServer.Tools.ConsoleHost;
+﻿using EDT.McpServer.Tools.ConsoleHost;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 try
 {

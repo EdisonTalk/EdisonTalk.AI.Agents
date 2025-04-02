@@ -1,6 +1,5 @@
-using EDT.McpServer.WebHost.Extensions;
 using EDT.McpServer.WebHost.Tools;
-using ModelContextProtocol;
+using ModelContextProtocol.AspNetCore;
 
 try
 {
@@ -13,7 +12,7 @@ try
 
     app.UseHttpsRedirection();
     app.MapGet("/", () => "Hello MCP Server!");
-    app.MapMcpSse();
+    app.MapMcp();
 
     app.Run();
     return 0;
